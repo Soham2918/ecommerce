@@ -8,20 +8,27 @@ import { SellerauthComponent } from './sellerauth/sellerauth.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
+import { SellerhomeComponent } from './sellerhome/sellerhome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SellerauthComponent,
-    NavbarComponent
+    NavbarComponent,
+    SellerhomeComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,33 @@
-[{
-    "seller":
-    [
-        {
-            "name":"Prasad",
-            "password":"@123",
-            "email":"joshp@123"
-        }
-    ]
-}]
+{
+  "seller": [
+    {
+      "name": "Prasad",
+      "password": "@123",
+      "email": "joshp@123"
+    },
+    {
+      "name": "Prasad1",
+      "password": "Prasad1",
+      "email": "Prasad1@gmail.com",
+      "id": "2"
+    },
+    {
+      "name": "joshi1",
+      "email": "joshi1@gmail.com",
+      "password": "joshi1",
+      "id": "lUOBwz5"
+    },
+    {
+      "name": "joshi1",
+      "email": "joshi1@gmail.com",
+      "password": "joshi1",
+      "id": "oNnWUjJ"
+    },
+    {
+      "name": "prasad11",
+      "email": "prasad11",
+      "password": "prasad11",
+      "id": "1y_1rY7"
+    }
+  ]
+}

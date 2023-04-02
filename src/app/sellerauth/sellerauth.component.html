@@ -1,26 +1,100 @@
-<p>sellerauth works!</p>
-<div class="container col-sm-10 col-md-8 col-lg-8 bg-white d-flex justify-content-center">
+
+<!--Sign Up Form-->
+
+<div class="container col-sm-10 col-md-8 col-lg-8 bg-white d-flex justify-content-center mt-5 ">
     
 
-    <form action="" class="shadow p-3 mb-5 bg-light rounded col-sm-10 col-md-6 col-lg-10 ">
+    <form  class="shadow p-3 mb-5 bg-light rounded col-sm-10 col-md-6 col-lg-10 pb-5" [formGroup]="sellerdata" *ngIf="signUpFormView">
     <div class="row  d-flex justify-content-center">
         <div class="col-lg-7 col-md-8 col-sm-10">
-            <h2 class="text-info mt-5"> Seller Login/Register</h2>
+            <h2 class="text-info mt-5"> Seller Sign-Up</h2>
 
             <label for="" class="form-label mt-4">User Name</label>
-            <input type="text" class="form-control col-8">
+            <input type="text" class="form-control col-8" formControlName="name">
         </div><br>
         <div class="mt-2 col-lg-7 col-md-8 col-sm-10">
 
             <label for="" class="form-label mt-3">Password </label>
-            <input type="text" class="form-control col-8">
+            <input type="password" class="form-control col-8" formControlName="password">
+        </div>
+        <div class="mt-2 col-lg-7 col-md-8 col-sm-10">
+
+            <label for="" class="form-label mt-3">e-mail Id </label>
+            <input type="email" class="form-control col-8" formControlName="email">
         </div>
 
         <div class="mt-4 col-lg-7 col-md-8 col-sm-10 ">
-            <div class="row col-12">
-                <a href="" class="col-4 text-danger ">Forgot PWD?</a> &nbsp;
-                <a href="" class="col-6 "> New Registration</a>
+
+
+            <div class="row ">
+
+                <div class="col-6">
+                    <button class="btn btn-success mt-2" (click)="signup()">Sign-Up</button>
+    
+                </div>
+                <div class="col-6 mt-3">
+                   Already Registered? &nbsp; <p href="" class="col-4 text-danger " (click)="logintoggle()">Log-In</p> &nbsp;
+
+                </div>
+
             </div>
+
+
+        </div>
+        
+    </div>
+
+        
+
+</form>
+
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------->
+
+<!--Sign in Page-->
+
+
+<div class="container col-sm-10 col-md-8 col-lg-8 bg-white d-flex justify-content-center mt-1">
+    
+
+    <form  class="shadow p-3 mb-5 bg-light rounded col-sm-10 col-md-6 col-lg-10 pb-5" [formGroup]="loginform" *ngIf="!signUpFormView">
+    <div class="row  d-flex justify-content-center">
+        <div class="col-lg-7 col-md-8 col-sm-10">
+            <h2 class="text-Dark mt-5" > Seller Log-In</h2>
+
+            <label for="" class="form-label mt-4">User Name</label>
+            <input type="text" class="form-control col-8" formControlName="name">
+        </div><br>
+        <div class="mt-2 col-lg-7 col-md-8 col-sm-10">
+
+            <label for="" class="form-label mt-3">Password </label>
+            <input type="password" class="form-control col-8" formControlName="password">
+        </div>
+        <!-- <div class="mt-2 col-lg-7 col-md-8 col-sm-10">
+
+            <label for="" class="form-label mt-3">e-mail Id </label>
+            <input type="email" class="form-control col-8" formControlName="email">
+        </div> -->
+
+        <div class="mt-4 col-lg-7 col-md-8 col-sm-10 ">
+
+
+            <div class="row ">
+
+                <div class="col-6">
+                    <button class="btn btn-success mt-2" (click)="SignIn()" >Log-In</button>
+    
+                </div>
+                <div class="col-6 mt-3">
+                   Not Registered? &nbsp; <p class="col-4 text-danger " (click)="signuuptoggle()">Sign-Up</p> &nbsp;
+
+                </div>
+
+            </div>
+
+
         </div>
         
     </div>
